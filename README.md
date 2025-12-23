@@ -48,7 +48,7 @@ Make sure to `import "tw-animate-css"` on thet `.css` file.
 
 ### 6. Copy the files
 
-Copy EVERYTHING inside the `./src/lib` folder to your `./src/lib` folder.
+Copy EVERYTHING the folder `./src/lib/xui` folder to your `./src/lib` folder.
 
 This contains all the components, helpers...
 

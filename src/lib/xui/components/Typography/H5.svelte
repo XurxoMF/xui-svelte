@@ -5,7 +5,7 @@
 </script>
 
 <script lang="ts">
-	import { cn } from '$lib/utils';
+	import { cn } from '$lib/xui/utils';
 
 	let { class: className, children, ...restProps }: H5PropsType = $props();
 </script>

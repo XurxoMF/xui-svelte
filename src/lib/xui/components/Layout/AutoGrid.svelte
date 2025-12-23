@@ -3,7 +3,7 @@
 
 	import { tv, type VariantProps } from 'tailwind-variants';
 
-	import { GENERIC_CONTAINER_CLASSES } from '$lib/utils';
+	import { GENERIC_CONTAINER_CLASSES } from '$lib/xui/utils';
 
 	/**
 	 * Auto grid container classes to use on the auto grid container.
@@ -36,7 +36,7 @@
 </script>
 
 <script lang="ts">
-	import { cn } from '$lib/utils';
+	import { cn } from '$lib/xui/utils';
 
 	let { columns, gap, padding, variant, isBreakpoint, class: className, children, ...restProps }: AutoGridProps = $props();
 </script>

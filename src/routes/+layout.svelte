@@ -3,7 +3,7 @@
 
 	import favicon from '$lib/assets/favicon.png';
 
-	import Theme from '$lib/components/Theme.svelte';
+	import Theme from '$lib/xui/components/Theme.svelte';
 
 	let { children } = $props();
 </script>

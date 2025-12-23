@@ -4,95 +4,91 @@
 
 @font-face {
 	font-family: 'Ubuntu';
-	src: url('$lib/assets/fonts/Ubuntu-Light.woff2') format('woff2');
+	src: url('$lib/xui/assets/fonts/Ubuntu-Light.woff2') format('woff2');
 	font-weight: 300;
 	font-style: normal;
 }
 
 @font-face {
 	font-family: 'Ubuntu';
-	src: url('$lib/assets/fonts/Ubuntu-LightItalic.woff2') format('woff2');
+	src: url('$lib/xui/assets/fonts/Ubuntu-LightItalic.woff2') format('woff2');
 	font-weight: 300;
 	font-style: italic;
 }
 
 @font-face {
 	font-family: 'Ubuntu';
-	src: url('$lib/assets/fonts/Ubuntu-Regular.woff2') format('woff2');
+	src: url('$lib/xui/assets/fonts/Ubuntu-Regular.woff2') format('woff2');
 	font-weight: 400;
 	font-style: normal;
 }
 
 @font-face {
 	font-family: 'Ubuntu';
-	src: url('$lib/assets/fonts/Ubuntu-Italic.woff2') format('woff2');
+	src: url('$lib/xui/assets/fonts/Ubuntu-Italic.woff2') format('woff2');
 	font-weight: 400;
 	font-style: italic;
 }
 
 @font-face {
 	font-family: 'Ubuntu';
-	src: url('$lib/assets/fonts/Ubuntu-Medium.woff2') format('woff2');
+	src: url('$lib/xui/assets/fonts/Ubuntu-Medium.woff2') format('woff2');
 	font-weight: 500;
 	font-style: normal;
 }
 
 @font-face {
 	font-family: 'Ubuntu';
-	src: url('$lib/assets/fonts/Ubuntu-MediumItalic.woff2') format('woff2');
+	src: url('$lib/xui/assets/fonts/Ubuntu-MediumItalic.woff2') format('woff2');
 	font-weight: 500;
 	font-style: italic;
 }
 
 @font-face {
 	font-family: 'Ubuntu';
-	src: url('$lib/assets/fonts/Ubuntu-Bold.woff2') format('woff2');
+	src: url('$lib/xui/assets/fonts/Ubuntu-Bold.woff2') format('woff2');
 	font-weight: 700;
 	font-style: normal;
 }
 
 @font-face {
 	font-family: 'Ubuntu';
-	src: url('$lib/assets/fonts/Ubuntu-BoldItalic.woff2') format('woff2');
+	src: url('$lib/xui/assets/fonts/Ubuntu-BoldItalic.woff2') format('woff2');
 	font-weight: 700;
 	font-style: italic;
 }
 
 @font-face {
 	font-family: 'UbuntuMono';
-	src: url('$lib/assets/fonts/UbuntuMono-Regular.woff2') format('woff2');
+	src: url('$lib/xui/assets/fonts/UbuntuMono-Regular.woff2') format('woff2');
 	font-weight: 400;
 	font-style: normal;
 }
 
 @font-face {
 	font-family: 'UbuntuMono';
-	src: url('$lib/assets/fonts/UbuntuMono-Italic.woff2') format('woff2');
+	src: url('$lib/xui/assets/fonts/UbuntuMono-Italic.woff2') format('woff2');
 	font-weight: 400;
 	font-style: italic;
 }
 
 @font-face {
 	font-family: 'UbuntuMono';
-	src: url('$lib/assets/fonts/UbuntuMono-Bold.woff2') format('woff2');
+	src: url('$lib/xui/assets/fonts/UbuntuMono-Bold.woff2') format('woff2');
 	font-weight: 700;
 	font-style: normal;
 }
 
 @font-face {
 	font-family: 'UbuntuMono';
-	src: url('$lib/assets/fonts/UbuntuMono-BoldItalic.woff2') format('woff2');
+	src: url('$lib/xui/assets/fonts/UbuntuMono-BoldItalic.woff2') format('woff2');
 	font-weight: 700;
 	font-style: italic;
 }
 
 @theme {
-	--font-ubuntu:
-		'Ubuntu', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Helvetica Neue',
-		Arial, sans-serif;
-	--font-ubuntu-mono:
-		'UbuntuMono', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono',
-		'Courier New', monospace;
+	--font-ubuntu: 'Ubuntu', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Helvetica Neue', Arial, sans-serif;
+	--font-ubuntu-mono: 'UbuntuMono', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace;
 
 	--breakpoint-3xl: 120rem;
 
