@@ -25,7 +25,7 @@ Make sure to change everything fo .ts files instead of .js files.
 ### 2. Install extra packages
 
 ```sh
-npm i -D tw-animate-css tailwind-merge tailwind-variants clsx
+npm i -D tw-animate-css tailwind-merge clsx
 ```
 
 ```sh
