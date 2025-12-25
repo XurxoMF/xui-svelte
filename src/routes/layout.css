@@ -90,10 +90,16 @@
 	--font-ubuntu: 'Ubuntu', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Helvetica Neue', Arial, sans-serif;
 	--font-ubuntu-mono: 'UbuntuMono', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace;
 
-	--spacing-content: 120rem;
+	--color-zinc-150: #ececee;
+	--color-zinc-250: #dcdce0;
+	--color-zinc-350: #bbbbc1;
+	--color-zinc-450: #898992;
+	--color-zinc-550: #62626b;
+	--color-zinc-650: #494951;
+	--color-zinc-750: #333338;
+	--color-zinc-850: #202023;
 
-	--background-image-image-dark: url('$lib/xui/assets/images/background-dark.jpg');
-	--background-image-image-light: url('$lib/xui/assets/images/background-light.jpg');
+	--spacing-content: 120rem;
 }
 
 @custom-variant dark {
@@ -104,7 +110,7 @@
 
 @layer base {
 	:root {
-		@apply bg-zinc-50 font-ubuntu text-zinc-950 dark:bg-zinc-950 dark:text-zinc-50;
+		@apply bg-zinc-250 font-ubuntu text-zinc-800 dark:bg-zinc-900 dark:text-zinc-100;
 	}
 
 	body {
