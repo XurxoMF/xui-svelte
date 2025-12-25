@@ -5,61 +5,91 @@ import type { Class, ClassVariant, ClassVariants, ReactiveClassVariant } from '$
 
 /**
  * Merges classes using twMerge and clsx to avoid duplication and allowing for dynamic classes.
+ *
  * @param inputs Classes to merge.
  * @returns The merged classes.
  */
-export function classMerge(...inputs: ClassValue[]): string {
+export function cm(...inputs: ClassValue[]): string {
 	return twMerge(clsx(inputs));
 }
 
 /**
- * Converts a window responsive value to a string.
+ * Converts a class value to a string.
  *
  * @example
  * ```ts
- * const GAP_MAP = {
- * 	none: 'gap-0',
- * 	xs: 'gap-1',
- * 	sm: 'gap-2',
- * 	md: 'gap-4',
- * 	lg: 'gap-6',
- * 	xl: 'gap-8'
+ * const VARIANT = {
+ * 	ghost: 'bg-ghost',
+ * 	solid: 'bg-solid',
+ * 	outline: 'bg-outline'
  * } as const;
  *
- * getReactiveClasses("xs", GAP_MAP); => "gap-1"
- * getReactiveClasses({ xs: "xs", @md: "md" }, GAP_MAP); => "xs:gap-1 @md:gap-4"
- * getReactiveClasses({ initial: "xs", md: "md" }, GAP_MAP); => "gap-1 xs:gap-4 md:gap-4
+ * fcv(VARIANT, "solid"); => "bg-solid"
  * ```
+ * @param cv {@link ClassVariant} The class variant.
  * @param value The value to convert.
- * @param map The map with the values for each breakpoint.
  * @returns The string representation of the value.
  */
-export function getReactiveClasses<T extends ClassVariant>(map: T, value: ReactiveClassVariant<T>): string | undefined {
-	if (typeof value !== 'object') return map[value];
+export function fcv<T extends ClassVariant>(cv: T, value: keyof T | undefined): string | undefined {
+	if (!value) return undefined;
+
+	return `${cv[value]}`;
+}
+
+/**
+ * Converts a responsive class value to a string.
+ *
+ * @example
+ * ```ts
+ * const VARIANT = {
+ * 	ghost: 'bg-ghost',
+ * 	solid: 'bg-solid',
+ * 	outline: 'bg-outline'
+ * } as const;
+ *
+ * frcv(VARIANT, { xs: "ghost", @md: "outline" }); => "xs:bg-ghost @md:bg-outline"
+ * ```
+ * @param rcv {@link ReactiveClassVariant} The reactive class variant.
+ * @param value The value to convert.
+ * @returns The string representation of the value.
+ */
+export function frcv<T extends ClassVariant>(rcv: T, value: ReactiveClassVariant<T> | undefined): string | undefined {
+	if (!value) return undefined;
 
 	return Object.entries(value)
-		.map(([k, v]) => (k === 'initial' ? map[v] : `${k}:${map[v]}`))
+		.map(([k, v]) => v != undefined && (k === 'base' ? rcv[v] : `${k}:${rcv[v]}`))
 		.join(' ');
 }
 
 /**
- * Creates a new class with merged base and variant classes.
- * @param classes {@link Class} The new class values.
- * @param extend {@link Class} The class to extend.
- * @returns The new class with merged base and variant classes.
+ * Creates a new Class and merges values if a second Class is provided.
+ *
+ * @example
+ * ```ts
+ * cv(
+ * 	{ base: 'text-zinc-50', variants: { variant: { ghost: 'bg-zinc-900' }}},
+ * 	{ base: 'opacity-50', variants: { variant: { ghost: 'border-1', outline: 'border-2' }, p: { none: 'p-0' }}}
+ * );
+ *
+ * { base: 'text-zinc-50 opacity-50', variants: { variant: { ghost: 'bg-zinc-900 border-1', outline: 'border-2' }, p: { none: 'p-0' }}}
+ * ```
+ *
+ * @param classes {@link Class} The new Class values.
+ * @param extend {@link Class} The Class to extend.
+ * @returns The new Class with merged values.
  */
-export function createClasses<T1 extends Partial<Class>, T2 extends Partial<Class>>(
+export function cv<T1 extends Partial<Class>, T2 extends Partial<Class>>(
 	classes: T1,
 	extend?: T2 | undefined
 ): Class & { variants: T1['variants'] & T2['variants'] } {
-	const newBase = classMerge(classes.base, extend?.base);
+	const newBase = cm(classes?.base, extend?.base);
 	const newVariants: ClassVariants = {};
 
-	if (classes.variants) {
+	if (classes?.variants) {
 		for (const [k, v] of Object.entries(classes.variants)) {
 			const newVariant: ClassVariant = {};
 			for (const [k2, v2] of Object.entries(v)) {
-				newVariant[k2] = classMerge(v2, extend?.variants?.[k]?.[k2]);
+				newVariant[k2] = cm(v2, extend?.variants?.[k]?.[k2]);
 			}
 			newVariants[k] = newVariant;
 		}
@@ -68,7 +98,7 @@ export function createClasses<T1 extends Partial<Class>, T2 extends Partial<Clas
 		for (const [k, v] of Object.entries(extend.variants)) {
 			const newVariant: ClassVariant = {};
 			for (const [k2, v2] of Object.entries(v)) {
-				newVariant[k2] = classMerge(v2, extend?.variants?.[k]?.[k2]);
+				newVariant[k2] = cm(v2, extend?.variants?.[k]?.[k2]);
 			}
 			newVariants[k] = newVariant;
 		}

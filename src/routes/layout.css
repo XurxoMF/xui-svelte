@@ -91,6 +91,9 @@
 	--font-ubuntu-mono: 'UbuntuMono', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace;
 
 	--spacing-content: 120rem;
+
+	--background-image-image-dark: url('$lib/xui/assets/images/background-dark.jpg');
+	--background-image-image-light: url('$lib/xui/assets/images/background-light.jpg');
 }
 
 @custom-variant dark {
@@ -102,6 +105,10 @@
 @layer base {
 	:root {
 		@apply bg-zinc-50 font-ubuntu text-zinc-950 dark:bg-zinc-950 dark:text-zinc-50;
+	}
+
+	body {
+		@apply h-screen w-screen;
 	}
 
 	/* Custom scale options */

@@ -5,11 +5,6 @@
 export type WithoutKeys<T, K extends keyof T> = T extends object ? Omit<T, Extract<keyof T, K>> : T;
 
 /**
- * If the type passes is true or false, convert it to a boolean, else return the type without modifications.
- */
-export type AsBooleanOrKey<T> = T extends 'true' | 'false' | true | false ? boolean : T;
-
-/**
  * A class variant.
  */
 export type ClassVariant = Record<string | number, string>;
@@ -17,7 +12,7 @@ export type ClassVariant = Record<string | number, string>;
 /**
  * Props for a class variant.
  */
-export type ClassVariantProps<T extends ClassVariant> = keyof AsBooleanOrKey<T>;
+export type ClassVariantProps<T extends ClassVariant> = keyof T;
 
 /**
  * A class variants.
@@ -39,14 +34,12 @@ export type ContainerReactiveBreakpoints = 'base' | '@xs' | '@sm' | '@md' | '@lg
  *
  * Can be a single key or an object with keys for each breakpoint.
  */
-export type ReactiveClassVariant<T extends ClassVariant> = keyof T | Partial<Record<WindowReactiveBreakpoints | ContainerReactiveBreakpoints, keyof T>>;
+export type ReactiveClassVariant<T extends ClassVariant> = Partial<Record<WindowReactiveBreakpoints | ContainerReactiveBreakpoints, keyof T>>;
 
 /**
  * Props for a reactive class variant.
  */
-export type ReactiveClassVariantProps<T extends ClassVariant> =
-	| keyof AsBooleanOrKey<T>
-	| Partial<Record<WindowReactiveBreakpoints | ContainerReactiveBreakpoints, keyof AsBooleanOrKey<T>>>;
+export type ReactiveClassVariantProps<T extends ClassVariant> = Partial<Record<WindowReactiveBreakpoints | ContainerReactiveBreakpoints, keyof T>>;
 
 /**
  * A class with variants, base styles...
