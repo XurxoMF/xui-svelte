@@ -6,15 +6,8 @@
 
 	let {
 		variant,
+		mode,
 		p,
-		pl,
-		pt,
-		pr,
-		pb,
-		px,
-		py,
-		shadow,
-		rounded,
 		position,
 		top,
 		right,
@@ -38,15 +31,8 @@
 	class={cn(
 		GRID_CLASSES({
 			variant,
+			mode,
 			p,
-			pl,
-			pt,
-			pr,
-			pb,
-			px,
-			py,
-			shadow,
-			rounded,
 			position,
 			top,
 			right,

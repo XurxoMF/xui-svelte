@@ -110,7 +110,7 @@
 
 @layer base {
 	:root {
-		@apply bg-zinc-250 font-ubuntu text-zinc-800 dark:bg-zinc-900 dark:text-zinc-100;
+		@apply bg-zinc-100 font-ubuntu text-zinc-800 dark:bg-zinc-900 dark:text-zinc-100;
 	}
 
 	body {

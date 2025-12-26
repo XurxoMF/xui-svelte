@@ -6,15 +6,8 @@
 
 	let {
 		variant,
+		mode,
 		p,
-		pl,
-		pt,
-		pr,
-		pb,
-		px,
-		py,
-		shadow,
-		rounded,
 		position,
 		top,
 		right,
@@ -34,7 +27,22 @@
 
 <div
 	class={cn(
-		COLUMNS_CLASSES({ variant, p, pl, pt, pr, pb, px, py, shadow, rounded, position, top, right, bottom, left, inset, isBreakpoint, columns, gap, gapX, gapY }),
+		COLUMNS_CLASSES({
+			variant,
+			mode,
+			p,
+			position,
+			top,
+			right,
+			bottom,
+			left,
+			inset,
+			isBreakpoint,
+			columns,
+			gap,
+			gapX,
+			gapY
+		}),
 		className
 	)}
 	{...restProps}

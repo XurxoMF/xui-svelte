@@ -6,26 +6,18 @@ import { tv } from 'tailwind-variants';
 export const GENERIC_CONTAINER_CLASSES = tv({
 	variants: {
 		variant: {
-			'ghost-base': 'bg-transparent',
-			'ghost-error': 'bg-transparent',
-			'ghost-success': 'bg-transparent',
-			'ghost-warning': 'bg-transparent',
-			'ghost-info': 'bg-transparent',
-			'outline-base': 'border border-zinc-150 bg-transparent dark:border-zinc-800',
-			'outline-error': 'border border-red-500 bg-transparent dark:border-red-800',
-			'outline-success': 'border border-green-500 bg-transparent dark:border-green-800',
-			'outline-warning': 'border border-yellow-400 bg-transparent dark:border-yellow-700',
-			'outline-info': 'border border-blue-500 bg-transparent dark:border-blue-800',
-			'card-base': 'border border-zinc-150 bg-zinc-200/50 dark:border-zinc-800 dark:bg-zinc-850/50',
-			'card-error': 'border border-red-500 bg-red-400/50 dark:border-red-800 dark:bg-red-900/50',
-			'card-success': 'border border-green-500 bg-green-400/50 dark:border-green-800 dark:bg-green-900/50',
-			'card-warning': 'border border-yellow-400 bg-yellow-300/50 dark:border-yellow-700 dark:bg-yellow-800/50',
-			'card-info': 'border border-blue-500 bg-blue-400/50 dark:border-blue-800 dark:bg-blue-900/50',
-			'solid-base': 'bg-zinc-150 dark:bg-zinc-800',
-			'solid-error': 'bg-red-500 dark:bg-red-800',
-			'solid-success': 'bg-green-500 dark:bg-green-800',
-			'solid-warning': 'bg-yellow-400 dark:bg-yellow-700',
-			'solid-info': 'bg-blue-500 dark:bg-blue-800'
+			ghost: 'rounded-xl bg-transparent',
+			outline: 'rounded-xl bg-transparent inset-ring',
+			soft: 'rounded-xl',
+			card: 'rounded-xl inset-ring',
+			solid: 'rounded-xl'
+		},
+		mode: {
+			base: '',
+			error: '',
+			success: '',
+			warning: '',
+			info: ''
 		},
 		p: {
 			none: 'p-0',
@@ -34,75 +26,6 @@ export const GENERIC_CONTAINER_CLASSES = tv({
 			md: 'p-4',
 			lg: 'p-6',
 			xl: 'p-8'
-		},
-		pl: {
-			none: 'pl-0',
-			xs: 'pl-1',
-			sm: 'pl-2',
-			md: 'pl-4',
-			lg: 'pl-6',
-			xl: 'pl-8'
-		},
-		pr: {
-			none: 'pr-0',
-			xs: 'pr-1',
-			sm: 'pr-2',
-			md: 'pr-4',
-			lg: 'pr-6',
-			xl: 'pr-8'
-		},
-		pt: {
-			none: 'pt-0',
-			xs: 'pt-1',
-			sm: 'pt-2',
-			md: 'pt-4',
-			lg: 'pt-6',
-			xl: 'pt-8'
-		},
-		pb: {
-			none: 'pb-0',
-			xs: 'pb-1',
-			sm: 'pb-2',
-			md: 'pb-4',
-			lg: 'pb-6',
-			xl: 'pb-8'
-		},
-		px: {
-			none: 'px-0',
-			xs: 'px-1',
-			sm: 'px-2',
-			md: 'px-4',
-			lg: 'px-6',
-			xl: 'px-8'
-		},
-		py: {
-			none: 'py-0',
-			xs: 'py-1',
-			sm: 'py-2',
-			md: 'py-4',
-			lg: 'py-6',
-			xl: 'py-8'
-		},
-		shadow: {
-			none: 'shadow-none',
-			sm: 'shadow-sm',
-			md: 'shadow-md',
-			lg: 'shadow-lg',
-			xl: 'shadow-xl',
-			'2xl': 'shadow-2xl',
-			'3xl': 'shadow-3xl',
-			'4xl': 'shadow-4xl'
-		},
-		rounded: {
-			none: 'rounded-none',
-			sm: 'rounded-sm',
-			md: 'rounded-md',
-			lg: 'rounded-lg',
-			xl: 'rounded-xl',
-			'2xl': 'rounded-2xl',
-			'3xl': 'rounded-3xl',
-			'4xl': 'rounded-4xl',
-			full: 'rounded-full'
 		},
 		position: {
 			static: 'static',
@@ -156,9 +79,50 @@ export const GENERIC_CONTAINER_CLASSES = tv({
 			false: ''
 		}
 	},
+	compoundVariants: [
+		{ variant: 'outline', mode: 'base', class: 'text-zinc-800 inset-ring-zinc-300 dark:text-zinc-100 dark:inset-ring-zinc-800' },
+		{ variant: 'outline', mode: 'error', class: 'text-zinc-800 inset-ring-red-400 dark:text-zinc-100 dark:inset-ring-red-700' },
+		{ variant: 'outline', mode: 'success', class: 'text-zinc-800 inset-ring-green-400 dark:text-zinc-100 dark:inset-ring-green-700' },
+		{ variant: 'outline', mode: 'warning', class: 'text-zinc-800 inset-ring-yellow-300 dark:text-zinc-100 dark:inset-ring-yellow-600' },
+		{ variant: 'outline', mode: 'info', class: 'text-zinc-800 inset-ring-blue-400 dark:text-zinc-100 dark:inset-ring-blue-700' },
+
+		{ variant: 'soft', mode: 'base', class: 'bg-zinc-200/50 text-zinc-800 dark:bg-zinc-850/50 dark:text-zinc-100' },
+		{ variant: 'soft', mode: 'error', class: 'bg-red-500/50 text-zinc-800 dark:bg-red-800/50 dark:text-zinc-100' },
+		{ variant: 'soft', mode: 'success', class: 'bg-green-500/50 text-zinc-800 dark:bg-green-800/50 dark:text-zinc-100' },
+		{ variant: 'soft', mode: 'warning', class: 'bg-yellow-400/50 text-zinc-800 dark:bg-yellow-700/50 dark:text-zinc-100' },
+		{ variant: 'soft', mode: 'info', class: 'bg-blue-500/50 text-zinc-800 dark:bg-blue-800/50 dark:text-zinc-100' },
+
+		{
+			variant: 'card',
+			mode: 'base',
+			class: 'bg-zinc-200/25 text-zinc-800 inset-ring-zinc-300 dark:bg-zinc-850/25 dark:text-zinc-100 dark:inset-ring-zinc-800'
+		},
+		{ variant: 'card', mode: 'error', class: 'bg-red-500/25 text-zinc-800 inset-ring-red-400 dark:bg-red-700/25 dark:text-zinc-100 dark:inset-ring-red-700' },
+		{
+			variant: 'card',
+			mode: 'success',
+			class: 'bg-green-500/25 text-zinc-800 inset-ring-green-400 dark:bg-green-700/25 dark:text-zinc-100 dark:inset-ring-green-700'
+		},
+		{
+			variant: 'card',
+			mode: 'warning',
+			class: 'bg-yellow-400/25 text-zinc-800 inset-ring-yellow-300 dark:bg-yellow-600/25 dark:text-zinc-100 dark:inset-ring-yellow-600'
+		},
+		{
+			variant: 'card',
+			mode: 'info',
+			class: 'bg-blue-500/25 text-zinc-800 inset-ring-blue-400 dark:bg-blue-700/25 dark:text-zinc-100 dark:inset-ring-blue-700'
+		},
+
+		{ variant: 'solid', mode: 'base', class: 'bg-zinc-200 text-zinc-800 dark:bg-zinc-850 dark:text-zinc-100' },
+		{ variant: 'solid', mode: 'error', class: 'bg-red-500 text-zinc-800 dark:bg-red-800 dark:text-zinc-100' },
+		{ variant: 'solid', mode: 'success', class: 'bg-green-500 text-zinc-800 dark:bg-green-800 dark:text-zinc-100' },
+		{ variant: 'solid', mode: 'warning', class: 'bg-yellow-400 text-zinc-800 dark:bg-yellow-700 dark:text-zinc-100' },
+		{ variant: 'solid', mode: 'info', class: 'bg-blue-500 text-zinc-800 dark:bg-blue-800 dark:text-zinc-100' }
+	],
 	defaultVariants: {
-		variant: 'ghost-base',
-		rounded: 'xl',
+		variant: 'ghost',
+		mode: 'base',
 		isBreakpoint: false
 	}
 });
@@ -169,26 +133,18 @@ export const GENERIC_CONTAINER_CLASSES = tv({
 export const GENERIC_COMPONENT_CLASSES = tv({
 	variants: {
 		variant: {
-			'ghost-base': 'bg-transparent',
-			'ghost-error': 'bg-transparent',
-			'ghost-success': 'bg-transparent',
-			'ghost-warning': 'bg-transparent',
-			'ghost-info': 'bg-transparent',
-			'outline-base': 'border border-zinc-150 bg-transparent dark:border-zinc-800',
-			'outline-error': 'border border-red-500 bg-transparent dark:border-red-800',
-			'outline-success': 'border border-green-500 bg-transparent dark:border-green-800',
-			'outline-warning': 'border border-yellow-400 bg-transparent dark:border-yellow-700',
-			'outline-info': 'border border-blue-500 bg-transparent dark:border-blue-800',
-			'card-base': 'border border-zinc-150 bg-zinc-200/50 dark:border-zinc-800 dark:bg-zinc-850/50',
-			'card-error': 'border border-red-500 bg-red-400/50 dark:border-red-800 dark:bg-red-900/50',
-			'card-success': 'border border-green-500 bg-green-400/50 dark:border-green-800 dark:bg-green-900/50',
-			'card-warning': 'border border-yellow-400 bg-yellow-300/50 dark:border-yellow-700 dark:bg-yellow-800/50',
-			'card-info': 'border border-blue-500 bg-blue-400/50 dark:border-blue-800 dark:bg-blue-900/50',
-			'solid-base': 'bg-zinc-150 dark:bg-zinc-800',
-			'solid-error': 'bg-red-500 dark:bg-red-800',
-			'solid-success': 'bg-green-500 dark:bg-green-800',
-			'solid-warning': 'bg-yellow-400 dark:bg-yellow-700',
-			'solid-info': 'bg-blue-500 dark:bg-blue-800'
+			ghost: 'rounded-sm bg-transparent',
+			outline: 'rounded-sm bg-transparent inset-ring',
+			soft: 'rounded-sm',
+			card: 'rounded-sm inset-ring',
+			solid: 'rounded-sm'
+		},
+		mode: {
+			base: '',
+			error: '',
+			success: '',
+			warning: '',
+			info: ''
 		},
 		size: {
 			sm: 'h-6 text-sm',
@@ -202,31 +158,53 @@ export const GENERIC_COMPONENT_CLASSES = tv({
 			'flex-2': 'flex-2',
 			'flex-3': 'flex-3',
 			'flex-4': 'flex-4'
-		},
-		shadow: {
-			none: 'shadow-none',
-			sm: 'shadow-sm',
-			md: 'shadow-md',
-			lg: 'shadow-lg',
-			xl: 'shadow-xl',
-			'2xl': 'shadow-2xl',
-			'3xl': 'shadow-3xl',
-			'4xl': 'shadow-4xl'
-		},
-		rounded: {
-			none: 'rounded-none',
-			sm: 'rounded-sm',
-			md: 'rounded-md',
-			lg: 'rounded-lg',
-			xl: 'rounded-xl',
-			full: 'rounded-full'
 		}
 	},
+	compoundVariants: [
+		{ variant: 'outline', mode: 'base', class: 'text-zinc-800 inset-ring-zinc-400 dark:text-zinc-100 dark:inset-ring-zinc-700' },
+		{ variant: 'outline', mode: 'error', class: 'text-zinc-800 inset-ring-red-500 dark:text-zinc-100 dark:inset-ring-red-600' },
+		{ variant: 'outline', mode: 'success', class: 'text-zinc-800 inset-ring-green-500 dark:text-zinc-100 dark:inset-ring-green-600' },
+		{ variant: 'outline', mode: 'warning', class: 'text-zinc-800 inset-ring-yellow-400 dark:text-zinc-100 dark:inset-ring-yellow-500' },
+		{ variant: 'outline', mode: 'info', class: 'text-zinc-800 inset-ring-blue-500 dark:text-zinc-100 dark:inset-ring-blue-600' },
+
+		{ variant: 'soft', mode: 'base', class: 'bg-zinc-300/50 text-zinc-800 dark:bg-zinc-800/50 dark:text-zinc-100' },
+		{ variant: 'soft', mode: 'error', class: 'bg-red-600/50 text-zinc-800 dark:bg-red-700/50 dark:text-zinc-100' },
+		{ variant: 'soft', mode: 'success', class: 'bg-green-600/50 text-zinc-800 dark:bg-green-700/50 dark:text-zinc-100' },
+		{ variant: 'soft', mode: 'warning', class: 'bg-yellow-500/50 text-zinc-800 dark:bg-yellow-600/50 dark:text-zinc-100' },
+		{ variant: 'soft', mode: 'info', class: 'bg-blue-600/50 text-zinc-800 dark:bg-blue-700/50 dark:text-zinc-100' },
+
+		{
+			variant: 'card',
+			mode: 'base',
+			class: 'bg-zinc-300/25 text-zinc-800 inset-ring-zinc-400 dark:bg-zinc-800/25 dark:text-zinc-100 dark:inset-ring-zinc-700'
+		},
+		{ variant: 'card', mode: 'error', class: 'bg-red-600/25 text-zinc-800 inset-ring-red-500 dark:bg-red-700/25 dark:text-zinc-100 dark:inset-ring-red-600' },
+		{
+			variant: 'card',
+			mode: 'success',
+			class: 'bg-green-600/25 text-zinc-800 inset-ring-green-500 dark:bg-green-700/25 dark:text-zinc-100 dark:inset-ring-green-600'
+		},
+		{
+			variant: 'card',
+			mode: 'warning',
+			class: 'bg-yellow-500/25 text-zinc-800 inset-ring-yellow-400 dark:bg-yellow-600/25 dark:text-zinc-100 dark:inset-ring-yellow-500'
+		},
+		{
+			variant: 'card',
+			mode: 'info',
+			class: 'bg-blue-600/25 text-zinc-800 inset-ring-blue-500 dark:bg-blue-700/25 dark:text-zinc-100 dark:inset-ring-blue-600'
+		},
+
+		{ variant: 'solid', mode: 'base', class: 'bg-zinc-300 text-zinc-800 dark:bg-zinc-800 dark:text-zinc-100' },
+		{ variant: 'solid', mode: 'error', class: 'bg-red-600 text-zinc-100 dark:bg-red-700 dark:text-zinc-100' },
+		{ variant: 'solid', mode: 'success', class: 'bg-green-600 text-zinc-100 dark:bg-green-700 dark:text-zinc-100' },
+		{ variant: 'solid', mode: 'warning', class: 'bg-yellow-500 text-zinc-100 dark:bg-yellow-600 dark:text-zinc-100' },
+		{ variant: 'solid', mode: 'info', class: 'bg-blue-600 text-zinc-100 dark:bg-blue-700 dark:text-zinc-100' }
+	],
 	defaultVariants: {
-		variant: 'card-base',
+		variant: 'solid',
+		modde: 'base',
 		size: 'md',
-		width: 'fit',
-		shadow: 'sm',
-		rounded: 'md'
+		width: 'fit'
 	}
 });
