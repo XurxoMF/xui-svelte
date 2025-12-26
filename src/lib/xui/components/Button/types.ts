@@ -1,6 +1,5 @@
 import { Button } from 'bits-ui';
-
-import type { VariantProps } from '$lib/xui/types';
+import type { VariantProps } from 'tailwind-variants';
 
 import type { BUTTON_CLASSES } from './classes';
 

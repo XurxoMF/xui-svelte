@@ -1,22 +1,20 @@
-import { cv } from '$lib/xui/utils/classes';
+import { tv } from 'tailwind-variants';
 
 import { GENERIC_COMPONENT_CLASSES } from '$lib/xui/components/classes';
 
 /**
  * Button classes to use on the button component.
  */
-export const BUTTON_CLASSES = cv(
-	{
-		base: 'shirnk-0 cursor-pointer flex items-center justify-center gap-1',
-		variants: {
-			content: {
-				text: 'px-2',
-				icon: 'aspect-square'
-			}
-		},
-		defaultVariants: {
-			content: { base: 'text' }
+export const BUTTON_CLASSES = tv({
+	extend: GENERIC_COMPONENT_CLASSES,
+	base: 'shirnk-0 cursor-pointer whitespace-nowrap flex items-center justify-center gap-1',
+	variants: {
+		content: {
+			text: 'px-2',
+			icon: 'aspect-square'
 		}
 	},
-	GENERIC_COMPONENT_CLASSES
-);
+	defaultVariants: {
+		content: 'text'
+	}
+});

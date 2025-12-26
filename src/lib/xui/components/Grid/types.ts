@@ -1,7 +1,6 @@
 import type { HTMLAttributes } from 'svelte/elements';
-
-import type { ReactiveClassVariantsProps } from '$lib/xui/types';
+import type { VariantProps } from 'tailwind-variants';
 
 import type { GRID_CLASSES } from './classes';
 
-export type GridProps = HTMLAttributes<HTMLDivElement> & ReactiveClassVariantsProps<typeof GRID_CLASSES.variants>;
+export type GridProps = HTMLAttributes<HTMLDivElement> & VariantProps<typeof GRID_CLASSES>;

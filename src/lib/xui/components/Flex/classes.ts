@@ -1,12 +1,13 @@
-import { cv } from '$lib/xui/utils/classes';
+import { tv } from 'tailwind-variants';
 
 import { GENERIC_CONTAINER_CLASSES } from '$lib/xui/components/classes';
 
 /**
  * Flex container classes to use on the flex container.
  */
-export const FLEX_CLASSES = cv(GENERIC_CONTAINER_CLASSES, {
-	base: 'flex',
+export const FLEX_CLASSES = tv({
+	extend: GENERIC_CONTAINER_CLASSES,
+	base: 'flex flex-wrap',
 	variants: {
 		direction: {
 			row: 'flex-row',
@@ -55,7 +56,7 @@ export const FLEX_CLASSES = cv(GENERIC_CONTAINER_CLASSES, {
 		}
 	},
 	defaultVariants: {
-		direction: { base: 'row' },
-		gap: { base: 'md' }
+		direction: 'row',
+		gap: 'md'
 	}
 });

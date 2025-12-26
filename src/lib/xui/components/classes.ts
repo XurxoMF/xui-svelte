@@ -1,9 +1,9 @@
-import { cv } from '$lib/xui/utils/classes';
+import { tv } from 'tailwind-variants';
 
 /**
  * Classes used on every container.
  */
-export const GENERIC_CONTAINER_CLASSES = cv({
+export const GENERIC_CONTAINER_CLASSES = tv({
 	variants: {
 		variant: {
 			'ghost-base': 'bg-transparent',
@@ -11,21 +11,21 @@ export const GENERIC_CONTAINER_CLASSES = cv({
 			'ghost-success': 'bg-transparent',
 			'ghost-warning': 'bg-transparent',
 			'ghost-info': 'bg-transparent',
-			'outline-base': 'bg-transparent border-2 border-zinc-150 dark:border-zinc-850',
-			'outline-error': 'bg-transparent border-2 border-red-400 dark:border-red-900',
-			'outline-success': 'bg-transparent border-2 border-green-400 dark:border-green-900',
-			'outline-warning': 'bg-transparent border-2 border-yellow-300 dark:border-yellow-800',
-			'outline-info': 'bg-transparent border-2 border-blue-400 dark:border-blue-900',
-			'card-base': 'bg-zinc-150/50 dark:bg-zinc-850/50 border-2 border-zinc-150 dark:border-zinc-850',
-			'card-error': 'bg-red-400/50 dark:bg-red-900/50 border-2 border-red-400 dark:border-red-900',
-			'card-success': 'bg-green-400/50 dark:bg-green-900/50 border-2 border-green-400 dark:border-green-900',
-			'card-warning': 'bg-yellow-300/50 dark:bg-yellow-800/50 border-2 border-yellow-300 dark:border-yellow-800',
-			'card-info': 'bg-blue-400/50 dark:bg-blue-900/50 border-2 border-blue-400 dark:border-blue-900',
-			'solid-base': 'bg-zinc-150 dark:bg-zinc-850',
-			'solid-error': 'bg-red-400 dark:bg-red-900',
-			'solid-success': 'bg-green-400 dark:bg-green-900',
-			'solid-warning': 'bg-yellow-300 dark:bg-yellow-800',
-			'solid-info': 'bg-blue-400 dark:bg-blue-900'
+			'outline-base': 'border border-zinc-150 bg-transparent dark:border-zinc-800',
+			'outline-error': 'border border-red-500 bg-transparent dark:border-red-800',
+			'outline-success': 'border border-green-500 bg-transparent dark:border-green-800',
+			'outline-warning': 'border border-yellow-400 bg-transparent dark:border-yellow-700',
+			'outline-info': 'border border-blue-500 bg-transparent dark:border-blue-800',
+			'card-base': 'border border-zinc-150 bg-zinc-200/50 dark:border-zinc-800 dark:bg-zinc-850/50',
+			'card-error': 'border border-red-500 bg-red-400/50 dark:border-red-800 dark:bg-red-900/50',
+			'card-success': 'border border-green-500 bg-green-400/50 dark:border-green-800 dark:bg-green-900/50',
+			'card-warning': 'border border-yellow-400 bg-yellow-300/50 dark:border-yellow-700 dark:bg-yellow-800/50',
+			'card-info': 'border border-blue-500 bg-blue-400/50 dark:border-blue-800 dark:bg-blue-900/50',
+			'solid-base': 'bg-zinc-150 dark:bg-zinc-800',
+			'solid-error': 'bg-red-500 dark:bg-red-800',
+			'solid-success': 'bg-green-500 dark:bg-green-800',
+			'solid-warning': 'bg-yellow-400 dark:bg-yellow-700',
+			'solid-info': 'bg-blue-500 dark:bg-blue-800'
 		},
 		p: {
 			none: 'p-0',
@@ -82,6 +82,16 @@ export const GENERIC_CONTAINER_CLASSES = cv({
 			md: 'py-4',
 			lg: 'py-6',
 			xl: 'py-8'
+		},
+		shadow: {
+			none: 'shadow-none',
+			sm: 'shadow-sm',
+			md: 'shadow-md',
+			lg: 'shadow-lg',
+			xl: 'shadow-xl',
+			'2xl': 'shadow-2xl',
+			'3xl': 'shadow-3xl',
+			'4xl': 'shadow-4xl'
 		},
 		rounded: {
 			none: 'rounded-none',
@@ -147,16 +157,16 @@ export const GENERIC_CONTAINER_CLASSES = cv({
 		}
 	},
 	defaultVariants: {
-		variant: { base: 'ghost-base' },
-		rounded: { base: 'xl' },
-		isBreakpoint: { base: 'false' }
+		variant: 'ghost-base',
+		rounded: 'xl',
+		isBreakpoint: false
 	}
 });
 
 /**
  * Classes used on most components.
  */
-export const GENERIC_COMPONENT_CLASSES = cv({
+export const GENERIC_COMPONENT_CLASSES = tv({
 	variants: {
 		variant: {
 			'ghost-base': 'bg-transparent',
@@ -164,17 +174,17 @@ export const GENERIC_COMPONENT_CLASSES = cv({
 			'ghost-success': 'bg-transparent',
 			'ghost-warning': 'bg-transparent',
 			'ghost-info': 'bg-transparent',
-			'outline-base': 'bg-transparent border-2 border-2 dark:border-zinc-800',
-			'outline-error': 'bg-transparent border-2 border-red-500 dark:border-red-800',
-			'outline-success': 'bg-transparent border-2 border-green-500 dark:border-green-800',
-			'outline-warning': 'bg-transparent border-2 border-yellow-400 dark:border-yellow-700',
-			'outline-info': 'bg-transparent border-2 border-blue-500 dark:border-blue-800',
-			'card-base': 'bg-100/50 dark:bg-zinc-800/50 border-2 border-2 dark:border-zinc-800',
-			'card-error': 'bg-red-500/50 dark:bg-red-800/50 border-2 border-red-500 dark:border-red-800',
-			'card-success': 'bg-green-500/50 dark:bg-green-800/50 border-2 border-green-500 dark:border-green-800',
-			'card-warning': 'bg-yellow-400/50 dark:bg-yellow-700/50 border-2 border-yellow-400 dark:border-yellow-700',
-			'card-info': 'bg-blue-500/50 dark:bg-blue-800/50 border-2 border-blue-500 dark:border-blue-800',
-			'solid-base': 'bg-100 dark:bg-zinc-800',
+			'outline-base': 'border border-zinc-150 bg-transparent dark:border-zinc-800',
+			'outline-error': 'border border-red-500 bg-transparent dark:border-red-800',
+			'outline-success': 'border border-green-500 bg-transparent dark:border-green-800',
+			'outline-warning': 'border border-yellow-400 bg-transparent dark:border-yellow-700',
+			'outline-info': 'border border-blue-500 bg-transparent dark:border-blue-800',
+			'card-base': 'border border-zinc-150 bg-zinc-200/50 dark:border-zinc-800 dark:bg-zinc-850/50',
+			'card-error': 'border border-red-500 bg-red-400/50 dark:border-red-800 dark:bg-red-900/50',
+			'card-success': 'border border-green-500 bg-green-400/50 dark:border-green-800 dark:bg-green-900/50',
+			'card-warning': 'border border-yellow-400 bg-yellow-300/50 dark:border-yellow-700 dark:bg-yellow-800/50',
+			'card-info': 'border border-blue-500 bg-blue-400/50 dark:border-blue-800 dark:bg-blue-900/50',
+			'solid-base': 'bg-zinc-150 dark:bg-zinc-800',
 			'solid-error': 'bg-red-500 dark:bg-red-800',
 			'solid-success': 'bg-green-500 dark:bg-green-800',
 			'solid-warning': 'bg-yellow-400 dark:bg-yellow-700',
@@ -193,6 +203,16 @@ export const GENERIC_COMPONENT_CLASSES = cv({
 			'flex-3': 'flex-3',
 			'flex-4': 'flex-4'
 		},
+		shadow: {
+			none: 'shadow-none',
+			sm: 'shadow-sm',
+			md: 'shadow-md',
+			lg: 'shadow-lg',
+			xl: 'shadow-xl',
+			'2xl': 'shadow-2xl',
+			'3xl': 'shadow-3xl',
+			'4xl': 'shadow-4xl'
+		},
 		rounded: {
 			none: 'rounded-none',
 			sm: 'rounded-sm',
@@ -203,9 +223,10 @@ export const GENERIC_COMPONENT_CLASSES = cv({
 		}
 	},
 	defaultVariants: {
-		variant: { base: 'card-base' },
-		size: { base: 'md' },
-		width: { base: 'fit' },
-		rounded: { base: 'md' }
+		variant: 'card-base',
+		size: 'md',
+		width: 'fit',
+		shadow: 'sm',
+		rounded: 'md'
 	}
 });

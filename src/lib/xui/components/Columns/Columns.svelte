@@ -1,8 +1,8 @@
 <script lang="ts">
 	import { cn } from 'tailwind-variants';
 
-	import { GRID_CLASSES } from './classes';
-	import type { GridProps } from './types';
+	import { COLUMNS_CLASSES } from './classes';
+	import type { ColumnsProps } from './types';
 
 	let {
 		variant,
@@ -26,41 +26,15 @@
 		gap,
 		gapX,
 		gapY,
-		justify,
-		align,
 		class: className,
 		children,
 		...restProps
-	}: GridProps = $props();
+	}: ColumnsProps = $props();
 </script>
 
 <div
 	class={cn(
-		GRID_CLASSES({
-			variant,
-			p,
-			pl,
-			pt,
-			pr,
-			pb,
-			px,
-			py,
-			shadow,
-			rounded,
-			position,
-			top,
-			right,
-			bottom,
-			left,
-			inset,
-			isBreakpoint,
-			columns,
-			gap,
-			gapX,
-			gapY,
-			justify,
-			align
-		}),
+		COLUMNS_CLASSES({ variant, p, pl, pt, pr, pb, px, py, shadow, rounded, position, top, right, bottom, left, inset, isBreakpoint, columns, gap, gapX, gapY }),
 		className
 	)}
 	{...restProps}
