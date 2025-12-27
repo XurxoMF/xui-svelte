@@ -4,7 +4,7 @@
 
 <Grid isBreakpoint>
 	<Grid columns={2} p="sm" gap="sm">
-		<Flex direction="column" p="sm" gap="sm" variant="card" mode="base">
+		<Flex direction="column" p="sm" gap="sm" variant="ghost" mode="base">
 			<H1>This is an H1</H1>
 			<H2>This is an H2</H2>
 			<H3>This is an H3</H3>
@@ -14,7 +14,7 @@
 			<P>This is a P</P>
 		</Flex>
 
-		<Flex direction="column" p="sm" gap="sm" variant="card" mode="base">
+		<Flex direction="column" p="sm" gap="sm" variant="ghost" mode="base">
 			<Flex align="center" gap="sm">
 				<Button variant="ghost" mode="base" content="icon" size="sm"><PHGitForkBoldIcon /></Button>
 				<Button variant="ghost" mode="base" content="icon" size="md"><PHGitForkBoldIcon /></Button>
@@ -29,7 +29,7 @@
 
 			<Flex align="center" gap="sm">
 				<Button variant="ghost" mode="info" content="icon" size="sm"><PHGitForkBoldIcon /></Button>
-				<Button variant="ghost" mode="info" content="icon" size="md"><PHGitForkBoldIcon /></Button>
+				<Button variant="ghost" mode="info" content="icon" size="md" disabled><PHGitForkBoldIcon /></Button>
 				<Button variant="ghost" mode="info" content="icon" size="lg"><PHGitForkBoldIcon /></Button>
 				<Button variant="ghost" mode="info" content="text" size="sm">Click Me!</Button>
 				<Button variant="ghost" mode="info" content="text" size="md">Click Me!</Button>
@@ -76,7 +76,7 @@
 			</Flex>
 		</Flex>
 
-		<Flex direction="column" p="sm" gap="sm" variant="card" mode="base">
+		<Flex direction="column" p="sm" gap="sm" variant="ghost" mode="base">
 			<Flex align="center" gap="sm">
 				<Button variant="outline" mode="base" content="icon" size="sm"><PHGitForkBoldIcon /></Button>
 				<Button variant="outline" mode="base" content="icon" size="md"><PHGitForkBoldIcon /></Button>
@@ -91,7 +91,7 @@
 
 			<Flex align="center" gap="sm">
 				<Button variant="outline" mode="info" content="icon" size="sm"><PHGitForkBoldIcon /></Button>
-				<Button variant="outline" mode="info" content="icon" size="md"><PHGitForkBoldIcon /></Button>
+				<Button variant="outline" mode="info" content="icon" size="md" disabled><PHGitForkBoldIcon /></Button>
 				<Button variant="outline" mode="info" content="icon" size="lg"><PHGitForkBoldIcon /></Button>
 				<Button variant="outline" mode="info" content="text" size="sm">Click Me!</Button>
 				<Button variant="outline" mode="info" content="text" size="md">Click Me!</Button>
@@ -138,69 +138,7 @@
 			</Flex>
 		</Flex>
 
-		<Flex direction="column" p="sm" gap="sm" variant="card" mode="base">
-			<Flex align="center" gap="sm">
-				<Button variant="soft" mode="base" content="icon" size="sm"><PHGitForkBoldIcon /></Button>
-				<Button variant="soft" mode="base" content="icon" size="md"><PHGitForkBoldIcon /></Button>
-				<Button variant="soft" mode="base" content="icon" size="lg"><PHGitForkBoldIcon /></Button>
-				<Button variant="soft" mode="base" content="text" size="sm">Click Me!</Button>
-				<Button variant="soft" mode="base" content="text" size="md">Click Me!</Button>
-				<Button variant="soft" mode="base" content="text" size="lg">Click Me!</Button>
-				<Button variant="soft" mode="base" content="text" size="sm"><PHGitForkBoldIcon />Click Me!</Button>
-				<Button variant="soft" mode="base" content="text" size="md"><PHGitForkBoldIcon />Click Me!</Button>
-				<Button variant="soft" mode="base" content="text" size="lg"><PHGitForkBoldIcon />Click Me!</Button>
-			</Flex>
-
-			<Flex align="center" gap="sm">
-				<Button variant="soft" mode="info" content="icon" size="sm"><PHGitForkBoldIcon /></Button>
-				<Button variant="soft" mode="info" content="icon" size="md"><PHGitForkBoldIcon /></Button>
-				<Button variant="soft" mode="info" content="icon" size="lg"><PHGitForkBoldIcon /></Button>
-				<Button variant="soft" mode="info" content="text" size="sm">Click Me!</Button>
-				<Button variant="soft" mode="info" content="text" size="md">Click Me!</Button>
-				<Button variant="soft" mode="info" content="text" size="lg">Click Me!</Button>
-				<Button variant="soft" mode="info" content="text" size="sm"><PHGitForkBoldIcon />Click Me!</Button>
-				<Button variant="soft" mode="info" content="text" size="md"><PHGitForkBoldIcon />Click Me!</Button>
-				<Button variant="soft" mode="info" content="text" size="lg"><PHGitForkBoldIcon />Click Me!</Button>
-			</Flex>
-
-			<Flex align="center" gap="sm">
-				<Button variant="soft" mode="success" content="icon" size="sm"><PHGitForkBoldIcon /></Button>
-				<Button variant="soft" mode="success" content="icon" size="md"><PHGitForkBoldIcon /></Button>
-				<Button variant="soft" mode="success" content="icon" size="lg"><PHGitForkBoldIcon /></Button>
-				<Button variant="soft" mode="success" content="text" size="sm">Click Me!</Button>
-				<Button variant="soft" mode="success" content="text" size="md">Click Me!</Button>
-				<Button variant="soft" mode="success" content="text" size="lg">Click Me!</Button>
-				<Button variant="soft" mode="success" content="text" size="sm"><PHGitForkBoldIcon />Click Me!</Button>
-				<Button variant="soft" mode="success" content="text" size="md"><PHGitForkBoldIcon />Click Me!</Button>
-				<Button variant="soft" mode="success" content="text" size="lg"><PHGitForkBoldIcon />Click Me!</Button>
-			</Flex>
-
-			<Flex align="center" gap="sm">
-				<Button variant="soft" mode="warning" content="icon" size="sm"><PHGitForkBoldIcon /></Button>
-				<Button variant="soft" mode="warning" content="icon" size="md"><PHGitForkBoldIcon /></Button>
-				<Button variant="soft" mode="warning" content="icon" size="lg"><PHGitForkBoldIcon /></Button>
-				<Button variant="soft" mode="warning" content="text" size="sm">Click Me!</Button>
-				<Button variant="soft" mode="warning" content="text" size="md">Click Me!</Button>
-				<Button variant="soft" mode="warning" content="text" size="lg">Click Me!</Button>
-				<Button variant="soft" mode="warning" content="text" size="sm"><PHGitForkBoldIcon />Click Me!</Button>
-				<Button variant="soft" mode="warning" content="text" size="md"><PHGitForkBoldIcon />Click Me!</Button>
-				<Button variant="soft" mode="warning" content="text" size="lg"><PHGitForkBoldIcon />Click Me!</Button>
-			</Flex>
-
-			<Flex align="center" gap="sm">
-				<Button variant="soft" mode="error" content="icon" size="sm"><PHGitForkBoldIcon /></Button>
-				<Button variant="soft" mode="error" content="icon" size="md"><PHGitForkBoldIcon /></Button>
-				<Button variant="soft" mode="error" content="icon" size="lg"><PHGitForkBoldIcon /></Button>
-				<Button variant="soft" mode="error" content="text" size="sm">Click Me!</Button>
-				<Button variant="soft" mode="error" content="text" size="md">Click Me!</Button>
-				<Button variant="soft" mode="error" content="text" size="lg">Click Me!</Button>
-				<Button variant="soft" mode="error" content="text" size="sm"><PHGitForkBoldIcon />Click Me!</Button>
-				<Button variant="soft" mode="error" content="text" size="md"><PHGitForkBoldIcon />Click Me!</Button>
-				<Button variant="soft" mode="error" content="text" size="lg"><PHGitForkBoldIcon />Click Me!</Button>
-			</Flex>
-		</Flex>
-
-		<Flex direction="column" p="sm" gap="sm" variant="card" mode="base">
+		<Flex direction="column" p="sm" gap="sm" variant="ghost" mode="error">
 			<Flex align="center" gap="sm">
 				<Button variant="card" mode="base" content="icon" size="sm"><PHGitForkBoldIcon /></Button>
 				<Button variant="card" mode="base" content="icon" size="md"><PHGitForkBoldIcon /></Button>
@@ -215,7 +153,7 @@
 
 			<Flex align="center" gap="sm">
 				<Button variant="card" mode="info" content="icon" size="sm"><PHGitForkBoldIcon /></Button>
-				<Button variant="card" mode="info" content="icon" size="md"><PHGitForkBoldIcon /></Button>
+				<Button variant="card" mode="info" content="icon" size="md" disabled><PHGitForkBoldIcon /></Button>
 				<Button variant="card" mode="info" content="icon" size="lg"><PHGitForkBoldIcon /></Button>
 				<Button variant="card" mode="info" content="text" size="sm">Click Me!</Button>
 				<Button variant="card" mode="info" content="text" size="md">Click Me!</Button>
@@ -262,7 +200,7 @@
 			</Flex>
 		</Flex>
 
-		<Flex direction="column" p="sm" gap="sm" variant="solid" mode="base">
+		<Flex direction="column" p="sm" gap="sm" variant="ghost" mode="base">
 			<Flex align="center" gap="sm">
 				<Button variant="solid" mode="base" content="icon" size="sm"><PHGitForkBoldIcon /></Button>
 				<Button variant="solid" mode="base" content="icon" size="md"><PHGitForkBoldIcon /></Button>
@@ -277,7 +215,7 @@
 
 			<Flex align="center" gap="sm">
 				<Button variant="solid" mode="info" content="icon" size="sm"><PHGitForkBoldIcon /></Button>
-				<Button variant="solid" mode="info" content="icon" size="md"><PHGitForkBoldIcon /></Button>
+				<Button variant="solid" mode="info" content="icon" size="md" disabled><PHGitForkBoldIcon /></Button>
 				<Button variant="solid" mode="info" content="icon" size="lg"><PHGitForkBoldIcon /></Button>
 				<Button variant="solid" mode="info" content="text" size="sm">Click Me!</Button>
 				<Button variant="solid" mode="info" content="text" size="md">Click Me!</Button>
