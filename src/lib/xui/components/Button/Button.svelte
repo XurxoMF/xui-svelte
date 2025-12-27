@@ -8,6 +8,18 @@
 	let { variant, mode, size, width, content, class: className, children, ...restProps }: ButtonProps = $props();
 </script>
 
-<Button.Root class={cn(BUTTON_CLASSES({ variant, mode, size, width, content }), className)} {...restProps}>
+<Button.Root
+	class={cn(
+		BUTTON_CLASSES({
+			variant,
+			mode,
+			size,
+			width,
+			content
+		}),
+		className
+	)}
+	{...restProps}
+>
 	{@render children?.()}
 </Button.Root>

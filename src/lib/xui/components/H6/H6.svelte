@@ -6,6 +6,6 @@
 	let { class: className, children, ...restProps }: H6PropsType = $props();
 </script>
 
-<h1 class={cn('text-xl font-bold', className)} {...restProps}>
+<h1 class={cn('text-lg font-bold', className)} {...restProps}>
 	{@render children?.()}
 </h1>

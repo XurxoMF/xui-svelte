@@ -18,7 +18,12 @@ export default defineConfig(
 	prettier,
 	...svelte.configs.prettier,
 	{
-		languageOptions: { globals: { ...globals.browser, ...globals.node } },
+		languageOptions: {
+			globals: {
+				...globals.browser,
+				...globals.node
+			}
+		},
 
 		rules: {
 			// typescript-eslint strongly recommend that you do not use the no-undef lint rule on TypeScript projects.

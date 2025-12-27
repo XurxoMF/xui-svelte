@@ -1,1 +1,1 @@
-export { default as SpinnersRingResizeIcon } from './RingResizeIcon.svelte'
+export { default as SpinnersRingResizeIcon } from './SpinnersRingResizeIcon.svelte';

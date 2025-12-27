@@ -7,6 +7,8 @@
 	let {
 		variant,
 		mode,
+		width,
+		height,
 		p,
 		position,
 		top,
@@ -32,6 +34,8 @@
 		GRID_CLASSES({
 			variant,
 			mode,
+			width,
+			height,
 			p,
 			position,
 			top,

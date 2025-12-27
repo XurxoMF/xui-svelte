@@ -1,5 +1,3 @@
-export * from './classes';
-
 export * from './P';
 export * from './H1';
 export * from './H2';
@@ -12,4 +10,5 @@ export * from './Columns';
 export * from './Flex';
 export * from './Theme';
 export * from './Button';
+export * from './Checkbox';
 export * from './Icons';

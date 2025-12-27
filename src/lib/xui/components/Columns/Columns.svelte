@@ -7,6 +7,8 @@
 	let {
 		variant,
 		mode,
+		width,
+		height,
 		p,
 		position,
 		top,
@@ -30,6 +32,8 @@
 		COLUMNS_CLASSES({
 			variant,
 			mode,
+			width,
+			height,
 			p,
 			position,
 			top,

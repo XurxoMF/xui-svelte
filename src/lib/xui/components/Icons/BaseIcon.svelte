@@ -1,16 +1,16 @@
 <script lang="ts">
-  import type { WithoutChildren } from 'bits-ui'
-  import type { HTMLAttributes } from 'svelte/elements'
+	import type { WithoutChildren } from 'bits-ui';
+	import type { HTMLAttributes } from 'svelte/elements';
 
-  export type BaseIconProps = HTMLAttributes<HTMLSpanElement>
+	export type BaseIconProps = HTMLAttributes<HTMLSpanElement>;
 
-  export type IconProps = WithoutChildren<BaseIconProps>
+	export type IconProps = WithoutChildren<BaseIconProps>;
 
-  let { class: className = '', children, ...restProps }: BaseIconProps = $props()
+	let { class: className = '', children, ...restProps }: BaseIconProps = $props();
 </script>
 
 <span class={['inline-flex', className]} {...restProps}>
-  {@render children?.()}
+	{@render children?.()}
 </span>
 
 <!-- CHANGE THE viewBox values depending on the SVG -->
@@ -19,7 +19,7 @@
 <script lang="ts">
   import type { WithoutChildren } from 'bits-ui'
 
-  import BaseIcon, { type BaseIconProps } from '../BaseIcon.svelte'
+	import BaseIcon, { type BaseIconProps } from '$lib/xui/components/Icons/BaseIcon.svelte';
 
   let { ...restProps }: WithoutChildren<BaseIconProps> = $props()
 </script>
